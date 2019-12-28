@@ -1,0 +1,13 @@
+name: default
+
+kind: pipeline
+type: docker
+
+steps:
+- name: build
+  image: rust:1.40
+  commands:
+    - rustup target add arm-unknown-linux-musleabi
+    - apt update
+    - apt install binutils-arm-linux-gnueabihf
+    - cargo build
