@@ -1,13 +1,13 @@
 [package]
 name = "lora-wan"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Tommy van der Vorst <tommy@pixelspark.nl>"]
 edition = "2018"
 description = "LoRaWAN stack for RFM9x LoRa/FSK transceiver in native Rust"
 license = "MIT"
 categories = ["embedded", "hardware-support"]
 keywords = ["iot","raspberry", "pi", "lora", "lorawan"]
-repository = "https://git.pixelspark.nl/pixelspark/lora-wan-rust"
+repository = "https://git.pixelspark.nl/pixelspark/lorawan-rust"
 
 [dependencies]
 rfm9x = "0.1.1"
