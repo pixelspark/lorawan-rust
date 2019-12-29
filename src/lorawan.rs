@@ -1,8 +1,9 @@
-use rfm9x::RFM95;
+use rfm9x::{RFM95, Channel, DataRate};
 use aes_soft::block_cipher_trait::generic_array::GenericArray;
 use aes_soft::block_cipher_trait::BlockCipher;
 use aes_soft::Aes128;
 use std::error::Error;
+use std::time::Duration;
 
 #[derive(Clone, Copy)]
 enum Direction {
@@ -367,8 +368,10 @@ impl<'a> LoRAWAN<'a> {
 		println!("encrypted payload: {:?}", encrypted_payload);
 		println!("packet: {:?}", phy_payload);
 
-		self.device.send_packet(&phy_payload, true)?;
+		self.device.send_packet(&phy_payload)?;
 		self.frame_counter += 1;
+		self.device.receive_packet_on_tx(true, Duration::from_millis(1000))?; // RX1
+		self.device.receive_packet(Channel::Ch9, DataRate::SF12_BW125, true, Duration::from_millis(1000))?; // RX2
 		Ok(())
 	}
 }
