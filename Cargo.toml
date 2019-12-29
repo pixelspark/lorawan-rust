@@ -12,6 +12,7 @@ repository = "https://git.pixelspark.nl/pixelspark/lorawan-rust"
 [dependencies]
 rfm9x = "0.1.1"
 aes-soft = "0.3.3"
+bitflags = "1.2.1"
 
 [dev-dependencies]
 rppal = "0.11.3"
