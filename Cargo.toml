@@ -1,6 +1,6 @@
 [package]
 name = "lora-wan"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["Tommy van der Vorst <tommy@pixelspark.nl>"]
 edition = "2018"
 description = "LoRaWAN stack for RFM9x LoRa/FSK transceiver in native Rust"
