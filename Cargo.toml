@@ -7,7 +7,7 @@ description = "LoRaWAN stack for RFM9x LoRa/FSK transceiver in native Rust"
 license = "MIT"
 categories = ["embedded", "hardware-support"]
 keywords = ["iot","raspberry", "pi", "lora", "lorawan"]
-repository = "https://git.pixelspark.nl/pixelspark/lorawan-rust"
+repository = "https://github.com/pixelspark/lorawan-rust"
 
 [dependencies]
 rfm9x = "0.1.1"
